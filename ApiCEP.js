@@ -48,12 +48,16 @@ function buscaCep(url,body){
     }
 
     function montaHtmlErro(result){
-
+        if(result.cep === null){
+            let html = "<h2> Resultado não encontrado:  </h2>";
+            html += "<h3><span style= 'fontWeight:bold'><b>Erro! Cep nulo ou invalido</b></span></h3>"
+            document.getElementById('resultado').innerHTML = html; 
+           }else{
         let html = "<h2> Resultado não encontrado:  </h2>";
         html += "<ul>";
         html += "<h3><span style= 'fontWeight:bold'>Erro Cep invalido</span></h3>"
         document.getElementById('resultado').innerHTML = html; 
-       
+           }
 
     }
 
