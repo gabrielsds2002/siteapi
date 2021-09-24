@@ -38,7 +38,7 @@ function buscaCep(url,body){
     function montaHtmlErro(result){
         let html = "<h2> Resultado não encontrado:  </h2>";
         html += "<ul>";
-        html += "<h2><span style= 'fontWeight:bold'>Erro Cep invalido</span></h2>"
+        html += "<h3><span style= 'fontWeight:bold'>Erro Cep invalido</span></h3>"
         document.getElementById('resultado').innerHTML = html; 
         alert("Formato de CEP inválido.");
        
